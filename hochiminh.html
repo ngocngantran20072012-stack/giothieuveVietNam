@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>TP. Hồ Chí Minh</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fdfdfd;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+  }
+
+  header {
+    background: #c8102e;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+  }
+
+  /* Icon ngôi sao (biểu tượng Sài Gòn năng động) */
+  .star {
+    position: absolute;
+    width: 90px; 
+    opacity: 0.95; 
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .star.left {
+    bottom: 0;
+    left: 25px;
+    animation-delay: 0s;
+  }
+
+  .star.right {
+    bottom: 0;
+    right: 25px;
+    animation-delay: 3s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(8deg);
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #ffdd57;
+  }
+
+  main {
+    padding: 40px 15%;
+    background: #fff;
+  }
+
+  h2 {
+    color: #c8102e;
+    font-size: 1.6rem;
+    margin-top: 40px;
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  /* Bố cục ảnh */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+  }
+
+  .image-container img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease;
+  }
+
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TP. Hồ Chí Minh - Hòn ngọc Viễn Đông</h1>
+    <img class="star left" src="nonlatrai.png" alt="ngôi sao">
+    <img class="star right" src="nolaphai.png" alt="ngôi sao">
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="hanoi.html">Hà Nội</a></li>
+        <li><a href="danang.html">Đà Nẵng</a></li>
+        <li><a href="hochiminh.html">TP. Hồ Chí Minh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Vị trí địa lí và lịch sử</h2>
+    <p><strong>Vị trí địa lí: </strong>Thành phố Hồ Chí Minh nằm ở giao điểm giữa vùng Đông Nam Bộ và đồng bằng sông Cửu Long, có vị trí thuận lợi cho việc giao thương cả trong nước và quốc tế. Nằm trên một vùng đất thấp, thành phố có hệ thống sông ngòi dày đặc, nổi bật là sông Sài Gòn và sông Đồng Nai, giúp phát triển giao thông đường thủy. Vị trí này cũng biến thành phố trở thành một trung tâm kết nối quan trọng về giao thông đường bộ, đường sắt và hàng không của cả nước.</p>
+    <p><strong>Lịch sử: </strong>Từ một vùng đất hoang sơ, Sài Gòn đã trải qua nhiều giai đoạn phát triển để trở thành Thành phố Hồ Chí Minh ngày nay. Vào thế kỷ 17, vùng đất này bắt đầu được khai phá và hình thành. Dưới thời Pháp thuộc, Sài Gòn trở thành "Hòn ngọc Viễn Đông" với nhiều công trình kiến trúc phương Tây. Sau năm 1975, Sài Gòn được đổi tên thành Thành phố Hồ Chí Minh và trở thành trung tâm kinh tế, văn hóa lớn nhất cả nước. Lịch sử thăng trầm đã tạo nên một thành phố năng động, đa dạng và giàu bản sắc.</p>
+      
+    <div class="image-container">
+      <img src="https://cdn2.tuoitre.vn/471584752817336320/2024/4/30/image001-1714455184555852737055.jpg" alt="Dinh Độc Lập">
+      <img src="https://dichvu-batdongsan.com/upload/baiviet/thelandmarklatoanhacaonhatvietnamvacakhuvucdongnama-2364.jpg" alt="Nhà thờ Đức Bà">
+    </div>
+
+    <h2>Truyền thống văn hóa</h2>
+    <p>Là nơi giao thoa của nhiều nền văn hóa, Thành phố Hồ Chí Minh mang một bản sắc độc đáo: cởi mở, đa dạng và không ngừng đổi mới. Nền văn hóa nơi đây là sự hòa trộn giữa truyền thống Việt Nam và các yếu tố phương Tây (đặc biệt là Pháp), cùng văn hóa của người Hoa và các dân tộc khác. Điều này thể hiện rõ nhất qua sự phong phú trong ẩm thực và nhịp sống sôi động của người dân. Dù tiếp thu những luồng văn hóa mới, thành phố vẫn giữ được những giá trị cốt lõi, tạo nên một sức hấp dẫn đặc biệt.</p>
+
+    <h2>Ẩm thực nổi tiếng</h2>
+    <p>Ẩm thực Thành phố Hồ Chí Minh đa dạng và nổi bật với nhiều món ăn đường phố. Cơm tấm với sườn nướng đậm đà, bánh mì giòn rụm với nhiều loại nhân, và hủ tiếu ngọt thanh là những món ăn đã trở thành biểu tượng của thành phố. Ngoài ra, các món ăn vặt như phá lấu, gỏi cuốn và các món ốc cũng góp phần làm nên sự phong phú, sôi động cho nền ẩm thực nơi đây.</p>
+    <div class="image-container">
+      <img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/11_2022/quan-com-tam-ngon-o-sai-gon.png" alt="Cơm tấm Sài Gòn">
+      <img src="https://media-cdn-v2.laodong.vn/storage/newsportal/2024/5/31/1346983/Banh-Mi-01.jpg" alt="Bánh mì Sài Gòn">
+    </div>
+
+    <h2>Địa điểm du lịch</h2>
+    <p>TP. Hồ Chí Minh, trung tâm kinh tế sôi động, là điểm đến du lịch hấp dẫn với sự pha trộn hài hòa giữa nét cổ kính và hiện đại. Thành phố này có vô số địa điểm tham quan nổi tiếng, đáp ứng mọi sở thích của du khách.</p>
+    <p><strong>KHU VỰC TRUNG TÂM: </strong>Dinh Độc Lập, Nhà thờ Đức Bà, Bưu điện Trung tâm thành phố, Phố đi bộ Nguyễn Huệ, Chợ Bến Thành.</p>
+    <p><strong>CÁC ĐIỂM ĐẾN LỊCH SỬ - VĂN HÓA KHÁC: </strong>Bảo tàng Chứng tích Chiến tranh, Bảo tàng Lịch sử Việt Nam, Bến Nhà Rồng, Chùa Ngọc Hoàng.</p>
+    <p><strong>ĐỊA ĐIỂM NGOẠI THÀNH: </strong>Địa đạo Củ Chi.</p>
+  </main>
+</body>
+</html>

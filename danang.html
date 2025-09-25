@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đà Nẵng</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #fdfdfd;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+  }
+
+  header {
+    background: #c8102e;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+  }
+
+  /* Biểu tượng sóng */
+  .wave {
+    position: absolute;
+    width: 100px; 
+    opacity: 0.95; 
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .wave.left {
+    bottom: 0;
+    left: 20px;
+    animation-delay: 0s;
+  }
+
+  .wave.right {
+    bottom: 0;
+    right: 20px;
+    animation-delay: 3s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(8deg);
+    }
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #ffdd57;
+  }
+
+  main {
+    padding: 40px 15%;
+    background: #fff;
+  }
+
+  h2 {
+    color: #c8102e;
+    font-size: 1.6rem;
+    margin-top: 40px;
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  /* Bố cục ảnh */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+  }
+
+  .image-container img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease;
+  }
+
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Đà Nẵng - Thành phố đáng sống</h1>
+    <img class="wave left" src="canhietdoi.png" alt="sóng biển">
+    <img class="wave right" src="https://emojigraph.org/media/apple/tropical-fish_1f420.png" alt="sóng biển">
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="hanoi.html">Hà Nội</a></li>
+        <li><a href="danang.html">Đà Nẵng</a></li>
+        <li><a href="hochiminh.html">TP. Hồ Chí Minh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Vị trí địa lí và lịch sử</h2>
+    <p><strong>Vị trí địa lí: </strong>Đà Nẵng nằm ở trung tâm của dải đất hình chữ S, được coi là cửa ngõ của Hành lang kinh tế Đông Tây kết nối Việt Nam với Lào, Thái Lan và Myanmar. Vị trí này giúp thành phố trở thành một trung tâm giao thương và du lịch quan trọng của khu vực.</p>
+    
+    
+    <p><strong>Lịch sử: </strong>Lịch sử của Đà Nẵng bắt đầu từ một phần của Vương quốc Chăm Pa, sau đó sáp nhập vào Đại Việt. Từ thế kỷ XVI-XVII, thành phố phát triển thành thương cảng Tourane sầm uất, là nơi giao thương của nhiều nền văn hóa.
+
+Bước ngoặt lớn xảy ra vào năm 1858, khi Pháp đổ bộ, biến Đà Nẵng thành một căn cứ quân sự quan trọng. Sau khi đất nước thống nhất, đến năm 1997, Đà Nẵng chính thức trở thành thành phố trực thuộc Trung ương, vươn lên mạnh mẽ để trở thành một trung tâm kinh tế, du lịch và văn hóa năng động như ngày nay.</p>
+
+    <div class="image-container">
+      <img src="https://hoangphuan.com/wp-content/uploads/2024/05/5057SYcmauYaNYng-MaiThanhChYYng1.jpg" alt="Thành phố Đà Nẵng">
+      <img src="https://dulichconvoi.com/wp-content/uploads/2019/04/cau-vang-ba-na-hills.jpg" alt="Bà Nà Hills - Đà Nẵng">
+    </div>
+
+    <h2>Truyền thống văn hóa</h2>
+    <p>Đà Nẵng, thành phố năng động bên bờ biển, nổi tiếng với sự giao thoa hài hòa giữa truyền thống và hiện đại.
+
+Văn hóa nơi đây gắn liền với biển cả, thể hiện qua các lễ hội cầu ngư và nghề cá. Các làng nghề truyền thống như chiếu Cẩm Nê, đá Non Nước và nước mắm Nam Ô vẫn được gìn giữ. Ẩm thực Đà Nẵng cũng là nét đặc trưng với các món như mì Quảng, bún chả cá.
+
+Những di tích lịch sử như bảo tàng Chăm hay Ngũ Hành Sơn cũng góp phần tạo nên bản sắc văn hóa độc đáo, vừa cổ kính vừa phát triển của thành phố.</p>
+
+    <h2>Ẩm thực nổi tiếng</h2>
+    <p>Ẩm thực Đà Nẵng rất đa dạng và đặc sắc, phản ánh rõ nét văn hóa ẩm thực miền Trung.
+
+Nổi bật nhất là mì Quảng, món ăn đã trở thành biểu tượng với nước dùng đậm đà, sợi mì dai ngon và rau sống tươi. Bún chả cá cũng rất được ưa chuộng nhờ nước dùng thanh ngọt từ cá.
+
+Ngoài ra, bạn cũng không nên bỏ lỡ bánh xèo tôm nhảy giòn rụm và gỏi cá Nam Ô nổi tiếng. Những món ăn này thể hiện sự tinh tế và gần gũi với biển cả của người dân Đà Nẵng.</p>
+      
+    <div class="image-container">
+      <img src="https://cdn.eva.vn/upload/2-2024/images/2024-04-21/ghe-da-nang-nem-mon-mi-sieu-noi-tieng-day-la-6-dia-chi-ngon-nhat-luc-nao-khach-cung-dong-nuom-nuop-mi-quang-quang-nam-1713708200-536-width750height563.jpg" alt="Mì Quảng">
+      <img src="https://static.vinwonders.com/2023/01/optimize_goi-ca-nam-o-4.jpg" alt="Gỏi cá Nam Ô">
+    </div>
+
+    <h2>Địa điểm du lịch</h2>
+    <p><strong>Bán đảo Sơn Trà: </strong> "lá phổi xanh" của thành phố, nơi có Chùa Linh Ứng và cảnh quan hùng vĩ.</p>
+    <p><strong>Ngũ Hành Sơn: </strong> Quần thể núi đá với nhiều hang động và làng nghề đá mỹ nghệ.
+
+</p>
+    <p><strong>Bà Nà Hills: </strong>Khu du lịch trên núi nổi tiếng với Cầu Vàng và khí hậu mát mẻ.</p>
+    <p><strong>Biển Mỹ Khê: </strong>Một trong những bãi biển đẹp nhất thế giới với cát trắng, sóng êm.
+
+</p>
+    <p><strong>Cầu Rồng: </strong>Biểu tượng của thành phố, nổi tiếng với màn phun lửa và nước vào cuối tuần.
+
+</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Việt Nam - Trang chủ</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #c8102e;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 10%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .map-container {
+      flex: 1;
+      position: relative;
+      max-width: 45%;
+    }
+
+    .map-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .map-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .content {
+      flex: 1;
+      text-align: justify;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      color: #c8102e;
+      margin-bottom: 20px;
+    }
+
+    /* Cờ bay */
+    .flag {
+      position: absolute;
+      width: 40px;
+      height: 30px;
+      background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg");
+      background-size: cover;
+      animation: floatFlag 10s linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes floatFlag {
+      from {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-200vh) rotate(360deg); /* Bay cao hơn */
+        opacity: 0;
+      }
+    }
+    .gallery {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .gallery h2 {
+      color: #c8102e;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+
+    .gallery-container {
+      overflow: hidden;
+      cursor: grab;
+    }
+
+    .gallery-container:active {
+      cursor: grabbing;
+    }
+
+    .gallery-track {
+      display: flex;
+      gap: 30px;
+      width: max-content;
+      animation: autoScroll 40s linear infinite;
+    }
+
+    .gallery-track img {
+      width: 450px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-track img:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes autoScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery-track img {
+        width: 280px;
+        height: 180px;
+      }
+    }
+
+    @keyframes scrollGallery {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery-track img {
+        width: 200px;
+        height: 130px;
+      }
+    }
+     /* Responsive cho tablet */
+    @media (max-width: 992px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .content {
+        font-size: 1rem;
+      }
+      .content h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* Responsive cho mobile */
+    @media (max-width: 576px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .map-container, .content {
+        min-width: 100%;
+      }
+      main {
+        padding: 20px;
+      }
+      .content {
+        font-size: 1rem;
+      }
+      .content h2 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Khám phá Việt Nam</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="hanoi.html">Hà Nội</a></li>
+        <li><a href="danang.html">Đà Nẵng</a></li>
+        <li><a href="hochiminh.html">TP. Hồ Chí Minh</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Ảnh bên trái -->
+    <div class="map-container">
+      <img src="https://abcdonline.vn/wp-content/uploads/2022/09/hinh-anh-ban-do-viet-nam-19.jpg" alt="Bản đồ Việt Nam">
+    </div>
+
+    <!-- Nội dung bên phải -->
+    <div class="content">
+      <h2>Giới thiệu về Việt Nam</h2>
+      <p>Việt Nam, quốc gia nằm ở phía đông bán đảo Đông Dương, là một dải đất hình chữ S, phía đông và nam giáp Biển Đông, phía bắc giáp Trung Quốc, phía tây giáp Lào và Campuchia. Với vị trí địa lí thuận lợi, Việt Nam là cầu nối quan trọng giữa các nền văn minh.</p>
+      <p>Việt Nam có một lịch sử hình thành lâu đời, với nền văn hóa đa dạng, phong phú. Truyền thống văn hóa Việt Nam được xây dựng trên nền tảng của nền văn minh lúa nước, đề cao tinh thần tôn kính tổ tiên, tôn trọng các giá trị cộng đồng và gia đình, lao động cần cù và hiếu học. Các lễ hội dân gian như lễ hội Đền Hùng, lễ hội chùa Hương, lễ hội đền Gióng Sóc Sơn... là những nét đặc trưng của văn hóa Việt Nam, thể hiện sự đa dạng, phong phú của nền văn hóa này.</p>
+      <p>Kinh tế Việt Nam hiện nay đang phát triển mạnh mẽ, trở thành một trong những nền kinh tế năng động nhất khu vực. Ngành nông nghiệp, công nghiệp, dịch vụ và du lịch đều có những bước tiến vượt bậc. Các thành phố lớn như Hà Nội, Đà Nẵng, TP. Hồ Chí Minh là những trung tâm kinh tế trọng điểm, đóng góp lớn vào sự phát triển chung của cả nước.</p>
+    </div>
+    
+  </main>
+!-- Thư viện ảnh -->
+  <section class="gallery">
+    <h2>Bộ sưu tập hình ảnh Việt Nam</h2>
+    <div class="gallery-container" id="gallery">
+      <div class="gallery-track">
+        <img src="https://mia.vn/media/uploads/blog-du-lich/mach-ban-ba-cach-di-du-lich-ha-long-thuong-ngoan-net-dep-cua-vinh-ha-long-tu-tren-cao-01-1642615666.jpg" alt="Vịnh Hạ Long">
+        <img src="https://booking.muongthanh.com/upload_images/images/H%60/dinh-nui-fansipan.jpg" alt="Sa Pa">
+        <img src="https://newlifetravel.vn/wp-content/uploads/2024/07/voucher-vinpearl-nha-trang-.jpg" alt="Nha Trang">
+        <img src="https://cdn.tgdd.vn/Files/2021/06/15/1360317/luu-ngay-10-dia-diem-du-lich-da-nang-mien-phi-nhat-dinh-phai-di-202306241355153348.jpg" alt="Đà Nẵng">
+        <img src="https://www.vietnamairlines.com/~/media/SEO-images/2025%20SEO/Traffic%20TA/MB/how-big-is-phu-quoc/phu-quocs-574-square-kilometers-make-it-larger-than-singapore.jpg?la=en" alt="Phú Quốc">
+        <img src="https://media.vietravel.com/images/Content/dia-diem-du-lich-hue-01.jpg" alt="Huế">
+        <!-- Lặp lại để tạo hiệu ứng vòng -->
+        <img src="https://mia.vn/media/uploads/blog-du-lich/mach-ban-ba-cach-di-du-lich-ha-long-thuong-ngoan-net-dep-cua-vinh-ha-long-tu-tren-cao-01-1642615666.jpg" alt="Vịnh Hạ Long">
+        <img src="https://booking.muongthanh.com/upload_images/images/H%60/dinh-nui-fansipan.jpg" alt="Sa Pa">
+        <img src="https://newlifetravel.vn/wp-content/uploads/2024/07/voucher-vinpearl-nha-trang-.jpg" alt="Nha Trang">
+      </div>
+    </div>
+  </section>
+  <script>
+    // Tạo hiệu ứng lá cờ bay ngẫu nhiên
+    function createFlag() {
+      const flag = document.createElement("div");
+      flag.classList.add("flag");
+      flag.style.left = Math.random() * window.innerWidth + "px";
+      flag.style.animationDuration = (6 + Math.random() * 5) + "s";
+      document.body.appendChild(flag);
+
+      // Xóa cờ khi bay xong
+      setTimeout(() => {
+        flag.remove();
+      }, 11000);
+    }
+
+    // Tạo cờ liên tục
+    setInterval(createFlag, 1000);
+
+  const gallery = document.getElementById("gallery");
+  let isDown = false;
+  let startX, scrollLeft, velocity = 0, momentumID;
+
+  // --- Desktop kéo chuột ---
+  gallery.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+    cancelMomentum();
+  });
+
+  gallery.addEventListener("mouseleave", () => isDown = false);
+  gallery.addEventListener("mouseup", () => {
+    isDown = false;
+    beginMomentum();
+  });
+
+  gallery.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - gallery.offsetLeft;
+    const walk = (x - startX);
+    gallery.scrollLeft = scrollLeft - walk;
+    velocity = -walk; // tốc độ
+  });
+
+  // --- Cảm ứng ---
+  let startTouchX = 0;
+  gallery.addEventListener("touchstart", (e) => {
+    startTouchX = e.touches[0].pageX;
+    scrollLeft = gallery.scrollLeft;
+    cancelMomentum();
+  });
+
+  gallery.addEventListener("touchmove", (e) => {
+    const x = e.touches[0].pageX;
+    const walk = (x - startTouchX);
+    gallery.scrollLeft = scrollLeft - walk;
+    velocity = -walk; // tốc độ
+  });
+
+  gallery.addEventListener("touchend", () => {
+    beginMomentum();
+  });
+
+  // --- Hiệu ứng quán tính ---
+  function beginMomentum() {
+    cancelMomentum();
+    momentumID = requestAnimationFrame(momentumLoop);
+  }
+
+  function cancelMomentum() {
+    cancelAnimationFrame(momentumID);
+  }
+
+  function momentumLoop() {
+    gallery.scrollLeft += velocity * 0.1; 
+    velocity *= 0.9; // giảm dần
+    if (Math.abs(velocity) > 0.5) {
+      momentumID = requestAnimationFrame(momentumLoop);
+    }
+  }
+
+  </script>
+</body>
+</html>
+
